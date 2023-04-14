@@ -28,6 +28,7 @@ class UserController extends Controller
             $users = User::where('id', '!=', '1')
                 ->orderBy('name')
                 ->paginate(10);
+                // ->simplePaginate(10);
         }
 
         return view('user.index', compact('users'));
